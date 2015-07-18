@@ -8,11 +8,13 @@
 
 import Foundation
 import Parse
+import ParseUI
 
 class ProfileInputViewController: UIViewController  {
     @IBOutlet weak var birthPlaceField: UITextField!
     @IBOutlet weak var nameField: UILabel!
-    @IBOutlet weak var profileImage: UIImageView!
+    
+    @IBOutlet weak var profileImage: PFImageView!
     @IBOutlet weak var purposeField: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,10 @@ class ProfileInputViewController: UIViewController  {
         self.birthPlaceField.text = user["username"] as! String
         
         self.nameField.text = user["username"] as! String
+        
+        profileImage.file = user["photo"] as! PFFile
+        profileImage.loadInBackground()
+
         
         /*
         PFSession.getCurrentSessionInBackgroundWithBlock {(session :PFSession?, error :NSError?) -> Void in

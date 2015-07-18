@@ -92,7 +92,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tf6-F2-N4G">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tf6-F2-N4G" customClass="PFImageView">
                                 <rect key="frame" x="36" y="10" width="121" height="95"/>
                             </imageView>
                         </subviews>
@@ -101,7 +101,7 @@
                     <connections>
                         <outlet property="birthPlaceField" destination="3fw-mI-zms" id="fBr-MM-9OD"/>
                         <outlet property="nameField" destination="UBU-9l-iqg" id="K0k-KZ-gge"/>
-                        <outlet property="profileImage" destination="tf6-F2-N4G" id="e8Y-Z0-ibU"/>
+                        <outlet property="profileImage" destination="tf6-F2-N4G" id="6vZ-Fh-4Y0"/>
                         <outlet property="purposeField" destination="Jqo-rr-P4O" id="zp4-b4-xC0"/>
                     </connections>
                 </viewController>

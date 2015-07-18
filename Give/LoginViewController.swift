@@ -57,6 +57,18 @@ class LoginViewController: UIViewController  {
                     
                     var picurl :String = "https://graph.facebook.com/" + userid + "/picture?type=large&return_ssl_resources=1"
                     
+                    
+                    let url = NSURL(string: picurl)
+                    let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
+                    
+                    var uiImage = UIImage(data: data!)
+                    
+                    var imageData = UIImagePNGRepresentation(uiImage)
+                    var parseImageFile = PFFile(name: "uploaded_image.png", data: imageData)
+                    
+                    
+                    facebookUser["photo"] = parseImageFile
+                    
                     println(picurl)
                     
                     facebookUser["username"] = result["name"]
