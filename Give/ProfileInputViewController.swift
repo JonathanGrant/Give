@@ -19,6 +19,12 @@ class ProfileInputViewController: UIViewController  {
         var user :PFUser  = PFUser.currentUser()!
         self.birthPlaceField.text = user["username"] as! String
         
+        
+        /*
+        PFSession.getCurrentSessionInBackgroundWithBlock {(session :PFSession?, error :NSError?) -> Void in
+            println(session?.sessionToken)
+        }
+*/
     }
     
     @IBAction func didCreateTap(sender: AnyObject) {
@@ -29,4 +35,5 @@ class ProfileInputViewController: UIViewController  {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 }

@@ -9,6 +9,8 @@
 import Foundation
 import Parse
 
+// http://www2.gtlaw.com/practices/immigration/hr/guides/PermissibleActivities.pdf
+
 class LoginViewController: UIViewController  {
     
     override func viewDidLoad() {
@@ -35,7 +37,7 @@ class LoginViewController: UIViewController  {
     }
     
     func fblogin(){
-        PFFacebookUtils.logInInBackgroundWithReadPermissions(["public_profile", "user_friends", "email", "user_photos"], block: {
+        PFFacebookUtils.logInInBackgroundWithReadPermissions(["public_profile", "user_friends", "email", "user_photos","user_about_me", "user_relationships", "user_birthday", "user_location"], block: {
             (user: PFUser?, error: NSError?) -> Void in
             if let facebookUser = user{
                 // Your app now has publishing permissions for the user
@@ -43,6 +45,27 @@ class LoginViewController: UIViewController  {
                 println(facebookUser)
                 println(PFUser.currentUser()?.objectId)
                 
+                var request :FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
+                request.startWithCompletionHandler({ (connection, result :AnyObject!, error :NSError!) -> Void in
+                    
+                    // TODO error handling
+                    println(result)
+                    println(result["id"])
+                    println(result["name"])
+                    println(result["birthday"])
+                    var userid = result["id"] as! String
+                    
+                    var picurl :String = "https://graph.facebook.com/" + userid + "/picture?type=large&return_ssl_resources=1"
+                    
+                    println(picurl)
+                    
+                    facebookUser["username"] = result["name"]
+                    facebookUser["picurl"] = picurl
+                    facebookUser.save()
+
+                })
+                
+
                 self.openProfileInputViewController()
             } else {
                 println(error)
