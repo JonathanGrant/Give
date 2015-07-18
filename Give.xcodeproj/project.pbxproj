@@ -15,6 +15,7 @@
 		3832425E1B5A0E0500DE9C89 /* GiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3832425D1B5A0E0500DE9C89 /* GiveTests.swift */; };
 		383242681B5A0EC100DE9C89 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383242671B5A0EC100DE9C89 /* Social.framework */; };
 		3832426A1B5A122F00DE9C89 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383242691B5A122F00DE9C89 /* MessageUI.framework */; };
+		3832426C1B5A232B00DE9C89 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3832426B1B5A232B00DE9C89 /* ShareViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		3832425D1B5A0E0500DE9C89 /* GiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveTests.swift; sourceTree = "<group>"; };
 		383242671B5A0EC100DE9C89 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		383242691B5A122F00DE9C89 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		3832426B1B5A232B00DE9C89 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				383242471B5A0E0500DE9C89 /* AppDelegate.swift */,
 				383242491B5A0E0500DE9C89 /* ViewController.swift */,
+				3832426B1B5A232B00DE9C89 /* ShareViewController.swift */,
 				3832424B1B5A0E0500DE9C89 /* Main.storyboard */,
 				3832424E1B5A0E0500DE9C89 /* Images.xcassets */,
 				383242501B5A0E0500DE9C89 /* LaunchScreen.xib */,
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3832426C1B5A232B00DE9C89 /* ShareViewController.swift in Sources */,
 				3832424A1B5A0E0500DE9C89 /* ViewController.swift in Sources */,
 				383242481B5A0E0500DE9C89 /* AppDelegate.swift in Sources */,
 			);

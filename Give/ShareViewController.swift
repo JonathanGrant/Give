@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ShareViewController.swift
 //  Give
 //
 //  Created by Jonathan Grant on 7/17/15.
@@ -10,19 +10,22 @@ import UIKit
 import Social
 import MessageUI
 
-class ViewController: UIViewController, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate {
-    
-    @IBOutlet weak var myWebView: UIWebView!
-    @IBOutlet weak var webBackButton: UIButton!
-    @IBOutlet weak var webRefreshButton: UIButton!
-    @IBOutlet weak var webForwardButton: UIButton!
+class ShareViewController: UIViewController, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate {
 
+    @IBOutlet weak var textMessage: UIButton!
+    @IBOutlet weak var email: UIButton!
+    @IBOutlet weak var twitter: UIButton!
+    @IBOutlet weak var facebook: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        let url = NSURL(string: "http://whomentors.com/project/campaign/3.html?layout=single")
-        let requestObj = NSURLRequest(URL: url!)
-        myWebView.loadRequest(requestObj)
+
+        // Do any additional setup after loading the view.
+        setUpIcons()
+    }
+    
+    func setUpIcons() {
+        //textMessage.font = UIFont.
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,26 +33,9 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, MFM
         // Dispose of any resources that can be recreated.
     }
     
-    //Web Methods
-    @IBAction func back(sender:AnyObject) {
-        if myWebView.canGoBack{
-            myWebView.goBack()
-        }
-    }
-    
-    @IBAction func forward(sender:AnyObject) {
-        if myWebView.canGoForward{
-            myWebView.goForward()
-        }
-    }
-    
-    @IBAction func refresh(sender:AnyObject) {
-        myWebView.reload()
-    }
-    
-    
-    //Sharing Methods
 
+    //Sharing Methods
+    
     @IBAction func shareToFacebook(sender: AnyObject) {
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
             var facebookSheet: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
@@ -61,7 +47,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, MFM
             self.presentViewController(alert, animated: true, completion: nil)
         }
     }
-
+    
     @IBAction func shareToTwitter(sender: AnyObject) {
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
             var twitterSheet: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
@@ -90,14 +76,14 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, MFM
     
     func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
         switch result.value {
-            case MFMailComposeResultCancelled.value:
-                print("Mail Cancelled")
-            case MFMailComposeResultSaved.value:
-                print("Mail Saved")
-            case MFMailComposeResultSent.value:
-                print("Mail Cancelled")
-            case MFMailComposeResultFailed.value:
-                print("Mail Failed")
+        case MFMailComposeResultCancelled.value:
+            print("Mail Cancelled")
+        case MFMailComposeResultSaved.value:
+            print("Mail Saved")
+        case MFMailComposeResultSent.value:
+            print("Mail Cancelled")
+        case MFMailComposeResultFailed.value:
+            print("Mail Failed")
         default:
             break
         }
@@ -105,7 +91,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, MFM
     }
     
     @IBAction func sendFromTextMessage(sender: AnyObject) {
-        var textMessage = MFMessageComposeViewController() //doesn;t work right now
+        let textMessage = MFMessageComposeViewController() //doesn;t work right now
         textMessage.body = "Check out my amazing campaign app on Give!"
         textMessage.recipients = ["6507993840"]
         textMessage.messageComposeDelegate = self
@@ -125,6 +111,6 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, MFM
         }
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-    
-}
 
+
+}

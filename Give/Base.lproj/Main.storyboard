@@ -17,59 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yni-xg-nU2">
-                                <rect key="frame" x="0.0" y="504" width="600" height="63"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9N-IM-rTQ">
-                                        <rect key="frame" x="8" y="0.0" width="130" height="30"/>
-                                        <state key="normal" title="Share to Facebook">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="shareToFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n0g-ub-Lf5"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alD-Mb-LCW">
-                                        <rect key="frame" x="8" y="33" width="108" height="30"/>
-                                        <state key="normal" title="Share to Twitter">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="shareToTwitter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A4X-bm-VlG"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uk1-xF-4oC">
-                                        <rect key="frame" x="161" y="0.0" width="117" height="30"/>
-                                        <state key="normal" title="Share from Email">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="sendFromEmail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f1r-Xx-62C"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byj-gr-HFs">
-                                        <rect key="frame" x="161" y="33" width="174" height="30"/>
-                                        <state key="normal" title="Share from Text Message">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="sendFromTextMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MND-fh-7ua"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="K9N-IM-rTQ" firstAttribute="top" secondItem="yni-xg-nU2" secondAttribute="top" id="Bph-dp-puU"/>
-                                    <constraint firstItem="alD-Mb-LCW" firstAttribute="top" secondItem="K9N-IM-rTQ" secondAttribute="bottom" constant="3" id="JPm-wf-qcT"/>
-                                    <constraint firstItem="byj-gr-HFs" firstAttribute="leading" secondItem="uk1-xF-4oC" secondAttribute="leading" id="OVr-ug-HvP"/>
-                                    <constraint firstItem="K9N-IM-rTQ" firstAttribute="leading" secondItem="yni-xg-nU2" secondAttribute="leadingMargin" id="VNa-QV-9vO"/>
-                                    <constraint firstItem="K9N-IM-rTQ" firstAttribute="baseline" secondItem="uk1-xF-4oC" secondAttribute="baseline" id="aIc-ty-i3W"/>
-                                    <constraint firstItem="K9N-IM-rTQ" firstAttribute="leading" secondItem="alD-Mb-LCW" secondAttribute="leading" id="bjm-Kg-oly"/>
-                                    <constraint firstItem="uk1-xF-4oC" firstAttribute="leading" secondItem="K9N-IM-rTQ" secondAttribute="trailing" constant="23" id="iH9-Vq-a8V"/>
-                                    <constraint firstItem="alD-Mb-LCW" firstAttribute="baseline" secondItem="byj-gr-HFs" secondAttribute="baseline" id="sAJ-Xx-N9j"/>
-                                    <constraint firstAttribute="bottom" secondItem="alD-Mb-LCW" secondAttribute="bottom" id="u1b-5D-qlj"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qTP-rj-uHf">
                                 <rect key="frame" x="0.0" y="445" width="600" height="51"/>
                                 <subviews>
@@ -103,32 +50,41 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="fHU-Bl-nV6" firstAttribute="leading" secondItem="qTP-rj-uHf" secondAttribute="leadingMargin" id="4DL-wD-JbO"/>
-                                    <constraint firstItem="RZc-xV-DOS" firstAttribute="trailing" secondItem="qTP-rj-uHf" secondAttribute="trailingMargin" id="9P1-QT-O0A"/>
-                                    <constraint firstItem="RZc-xV-DOS" firstAttribute="baseline" secondItem="ZgF-bP-Jeq" secondAttribute="baseline" id="NyE-mw-ZOl"/>
-                                    <constraint firstItem="fHU-Bl-nV6" firstAttribute="baseline" secondItem="ZgF-bP-Jeq" secondAttribute="baseline" id="RV1-Ad-x7U"/>
-                                    <constraint firstItem="fHU-Bl-nV6" firstAttribute="top" secondItem="qTP-rj-uHf" secondAttribute="top" constant="11" id="eVL-Ra-yL5"/>
-                                    <constraint firstItem="ZgF-bP-Jeq" firstAttribute="centerX" secondItem="qTP-rj-uHf" secondAttribute="centerX" id="mDg-k0-cpS"/>
-                                    <constraint firstAttribute="bottom" secondItem="fHU-Bl-nV6" secondAttribute="bottom" constant="10" id="oWX-jG-5Vj"/>
+                                    <constraint firstItem="ZgF-bP-Jeq" firstAttribute="centerX" secondItem="qTP-rj-uHf" secondAttribute="centerX" id="5ih-VD-S3Q"/>
+                                    <constraint firstAttribute="bottom" secondItem="fHU-Bl-nV6" secondAttribute="bottom" constant="10" id="Old-A3-lto"/>
+                                    <constraint firstItem="RZc-xV-DOS" firstAttribute="trailing" secondItem="qTP-rj-uHf" secondAttribute="trailingMargin" id="Vpz-V0-5kJ"/>
+                                    <constraint firstItem="fHU-Bl-nV6" firstAttribute="leading" secondItem="qTP-rj-uHf" secondAttribute="leadingMargin" id="Wze-Nb-giA"/>
+                                    <constraint firstItem="fHU-Bl-nV6" firstAttribute="top" secondItem="qTP-rj-uHf" secondAttribute="top" constant="11" id="r0Y-st-zZn"/>
+                                    <constraint firstItem="fHU-Bl-nV6" firstAttribute="baseline" secondItem="ZgF-bP-Jeq" secondAttribute="baseline" id="rjw-BR-Og0"/>
+                                    <constraint firstItem="ZgF-bP-Jeq" firstAttribute="baseline" secondItem="RZc-xV-DOS" secondAttribute="baseline" id="tHR-Gf-aBq"/>
                                 </constraints>
                             </view>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sz0-Hl-9c8">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="437"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mh5-z3-azq">
+                                <rect key="frame" x="0.0" y="504" width="600" height="30"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bl5-tc-yRB" kind="presentation" id="dtX-K4-FMC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yni-xg-nU2" secondAttribute="bottom" constant="33" id="6eZ-Jy-APh"/>
-                            <constraint firstItem="qTP-rj-uHf" firstAttribute="trailing" secondItem="Sz0-Hl-9c8" secondAttribute="trailing" id="BJM-wj-i1A"/>
-                            <constraint firstItem="yni-xg-nU2" firstAttribute="leading" secondItem="qTP-rj-uHf" secondAttribute="leading" id="NCI-LH-gki"/>
-                            <constraint firstItem="yni-xg-nU2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qjf-62-vnK"/>
-                            <constraint firstItem="yni-xg-nU2" firstAttribute="top" secondItem="qTP-rj-uHf" secondAttribute="bottom" constant="8" symbolic="YES" id="W4F-ro-6Fn"/>
-                            <constraint firstItem="Sz0-Hl-9c8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gfx-xN-bRE"/>
-                            <constraint firstItem="qTP-rj-uHf" firstAttribute="trailing" secondItem="yni-xg-nU2" secondAttribute="trailing" id="s15-Zf-3pi"/>
-                            <constraint firstItem="qTP-rj-uHf" firstAttribute="top" secondItem="Sz0-Hl-9c8" secondAttribute="bottom" constant="8" symbolic="YES" id="tKx-R3-O0W"/>
-                            <constraint firstItem="Sz0-Hl-9c8" firstAttribute="leading" secondItem="qTP-rj-uHf" secondAttribute="leading" id="uik-WQ-3mq"/>
-                            <constraint firstAttribute="trailing" secondItem="Sz0-Hl-9c8" secondAttribute="trailing" id="y6R-5f-Bx7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Mh5-z3-azq" secondAttribute="bottom" constant="66" id="4sc-Pf-KX9"/>
+                            <constraint firstItem="qTP-rj-uHf" firstAttribute="leading" secondItem="Mh5-z3-azq" secondAttribute="leading" id="7XJ-2f-oTy"/>
+                            <constraint firstItem="qTP-rj-uHf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Mda-zz-COW"/>
+                            <constraint firstAttribute="trailing" secondItem="qTP-rj-uHf" secondAttribute="trailing" id="O00-4C-6jk"/>
+                            <constraint firstItem="Sz0-Hl-9c8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RJe-Sm-HtC"/>
+                            <constraint firstItem="Mh5-z3-azq" firstAttribute="trailing" secondItem="qTP-rj-uHf" secondAttribute="trailing" id="UNZ-j5-Y2B"/>
+                            <constraint firstItem="qTP-rj-uHf" firstAttribute="leading" secondItem="Sz0-Hl-9c8" secondAttribute="leading" id="Xwa-FV-I3Y"/>
+                            <constraint firstItem="qTP-rj-uHf" firstAttribute="top" secondItem="Sz0-Hl-9c8" secondAttribute="bottom" constant="8" symbolic="YES" id="udB-pC-WdR"/>
+                            <constraint firstItem="qTP-rj-uHf" firstAttribute="trailing" secondItem="Sz0-Hl-9c8" secondAttribute="trailing" id="ugN-vw-33B"/>
+                            <constraint firstItem="Mh5-z3-azq" firstAttribute="top" secondItem="qTP-rj-uHf" secondAttribute="bottom" constant="8" symbolic="YES" id="yaQ-4E-GPp"/>
                         </constraints>
                     </view>
                     <connections>
@@ -141,6 +97,91 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="430" y="366"/>
+        </scene>
+        <!--Share View Controller-->
+        <scene sceneID="bwu-kf-awR">
+            <objects>
+                <viewController id="bl5-tc-yRB" customClass="ShareViewController" customModule="Give" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bji-2z-Tyw"/>
+                        <viewControllerLayoutGuide type="bottom" id="X17-12-4QS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ppm-rD-Uqe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yni-xg-nU2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="63"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9N-IM-rTQ">
+                                        <rect key="frame" x="8" y="0.0" width="130" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Share to Facebook">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shareToFacebook:" destination="bl5-tc-yRB" eventType="touchUpInside" id="9fa-mY-QUr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alD-Mb-LCW">
+                                        <rect key="frame" x="8" y="33" width="108" height="30"/>
+                                        <state key="normal" title="Share to Twitter">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shareToTwitter:" destination="bl5-tc-yRB" eventType="touchUpInside" id="C30-8X-bTQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byj-gr-HFs">
+                                        <rect key="frame" x="161" y="33" width="174" height="30"/>
+                                        <state key="normal" title="Share from Text Message">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendFromTextMessage:" destination="bl5-tc-yRB" eventType="touchUpInside" id="Eq7-kf-ZQa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uk1-xF-4oC">
+                                        <rect key="frame" x="161" y="0.0" width="117" height="30"/>
+                                        <state key="normal" title="Share from Email">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendFromEmail:" destination="bl5-tc-yRB" eventType="touchUpInside" id="eBu-kg-Gam"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="uk1-xF-4oC" firstAttribute="baseline" secondItem="K9N-IM-rTQ" secondAttribute="baseline" id="6QL-RX-QYw"/>
+                                    <constraint firstItem="K9N-IM-rTQ" firstAttribute="leading" secondItem="yni-xg-nU2" secondAttribute="leadingMargin" id="6mX-Ex-Jm1"/>
+                                    <constraint firstItem="alD-Mb-LCW" firstAttribute="leading" secondItem="K9N-IM-rTQ" secondAttribute="leading" id="BRN-yc-wXE"/>
+                                    <constraint firstAttribute="bottom" secondItem="alD-Mb-LCW" secondAttribute="bottom" id="IEN-dJ-NXF"/>
+                                    <constraint firstItem="uk1-xF-4oC" firstAttribute="leading" secondItem="K9N-IM-rTQ" secondAttribute="trailing" constant="23" id="SUl-Hb-gaJ"/>
+                                    <constraint firstItem="K9N-IM-rTQ" firstAttribute="top" secondItem="yni-xg-nU2" secondAttribute="top" id="qyH-wc-0kC"/>
+                                    <constraint firstItem="uk1-xF-4oC" firstAttribute="leading" secondItem="byj-gr-HFs" secondAttribute="leading" id="sT5-lg-QR4"/>
+                                    <constraint firstItem="alD-Mb-LCW" firstAttribute="baseline" secondItem="byj-gr-HFs" secondAttribute="baseline" id="tu2-Od-X1v"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yni-xg-nU2" firstAttribute="leading" secondItem="Ppm-rD-Uqe" secondAttribute="leading" id="3fl-01-Luv"/>
+                            <constraint firstItem="X17-12-4QS" firstAttribute="top" secondItem="yni-xg-nU2" secondAttribute="bottom" constant="537" id="DB6-kR-Oi5"/>
+                            <constraint firstAttribute="trailing" secondItem="yni-xg-nU2" secondAttribute="trailing" id="Usv-8a-eA8"/>
+                            <constraint firstItem="yni-xg-nU2" firstAttribute="top" secondItem="Ppm-rD-Uqe" secondAttribute="top" id="hGK-Go-OY3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="email" destination="uk1-xF-4oC" id="iuF-le-idm"/>
+                        <outlet property="facebook" destination="K9N-IM-rTQ" id="jde-aJ-pGn"/>
+                        <outlet property="textMessage" destination="byj-gr-HFs" id="mTJ-23-Q0s"/>
+                        <outlet property="twitter" destination="alD-Mb-LCW" id="Lc5-dX-PZa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y39-wY-D6E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079" y="360"/>
         </scene>
     </scenes>
 </document>
