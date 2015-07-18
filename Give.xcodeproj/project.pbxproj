@@ -29,6 +29,7 @@
 		66A575D71B5A0F9700C7374D /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A575D11B5A0F9700C7374D /* ParseFacebookUtils.framework */; };
 		66A575D81B5A0F9700C7374D /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A575D21B5A0F9700C7374D /* ParseFacebookUtilsV4.framework */; };
 		66A575D91B5A0F9700C7374D /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A575D31B5A0F9700C7374D /* ParseUI.framework */; };
+		66A575EE1B5A16E900C7374D /* ObjectiveCTestObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A575ED1B5A16E900C7374D /* ObjectiveCTestObj.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		66A575D11B5A0F9700C7374D /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		66A575D21B5A0F9700C7374D /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		66A575D31B5A0F9700C7374D /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		66A575EC1B5A16E800C7374D /* Give-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Give-Bridging-Header.h"; sourceTree = "<group>"; };
+		66A575ED1B5A16E900C7374D /* ObjectiveCTestObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjectiveCTestObj.m; path = Give/ObjectiveCTestObj.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,7 @@
 		383242391B5A0E0500DE9C89 = {
 			isa = PBXGroup;
 			children = (
+				66A575ED1B5A16E900C7374D /* ObjectiveCTestObj.m */,
 				66A575CC1B5A0F6B00C7374D /* libsqlite3.dylib */,
 				66A575CA1B5A0F6100C7374D /* libz.dylib */,
 				66A575C81B5A0F5A00C7374D /* SystemConfiguration.framework */,
@@ -120,6 +124,7 @@
 				383242441B5A0E0500DE9C89 /* Give */,
 				3832425A1B5A0E0500DE9C89 /* GiveTests */,
 				383242431B5A0E0500DE9C89 /* Products */,
+				66A575EC1B5A16E800C7374D /* Give-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -277,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3832424A1B5A0E0500DE9C89 /* ViewController.swift in Sources */,
+				66A575EE1B5A16E900C7374D /* ObjectiveCTestObj.m in Sources */,
 				383242481B5A0E0500DE9C89 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +412,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Give",
@@ -413,6 +420,8 @@
 				INFOPLIST_FILE = Give/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Give-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -420,6 +429,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Give",
@@ -427,6 +437,7 @@
 				INFOPLIST_FILE = Give/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Give-Bridging-Header.h";
 			};
 			name = Release;
 		};
