@@ -11,16 +11,44 @@ import Social
 import MessageUI
 
 class ViewController: UIViewController, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate {
+    
+    @IBOutlet weak var myWebView: UIWebView!
+    @IBOutlet weak var webBackButton: UIButton!
+    @IBOutlet weak var webRefreshButton: UIButton!
+    @IBOutlet weak var webForwardButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let url = NSURL(string: "http://whomentors.com/project/campaign/3.html?layout=single")
+        let requestObj = NSURLRequest(URL: url!)
+        myWebView.loadRequest(requestObj)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //Web Methods
+    @IBAction func back(sender:AnyObject) {
+        if myWebView.canGoBack{
+            myWebView.goBack()
+        }
+    }
+    
+    @IBAction func forward(sender:AnyObject) {
+        if myWebView.canGoForward{
+            myWebView.goForward()
+        }
+    }
+    
+    @IBAction func refresh(sender:AnyObject) {
+        myWebView.reload()
+    }
+    
+    
+    //Sharing Methods
 
     @IBAction func shareToFacebook(sender: AnyObject) {
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {

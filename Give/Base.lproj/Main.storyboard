@@ -78,18 +78,27 @@
                                         <state key="normal" title="Back Icon">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qkb-z6-gdb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgF-bP-Jeq">
                                         <rect key="frame" x="257" y="11" width="87" height="30"/>
                                         <state key="normal" title="Refresh Icon">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="refresh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LKz-Eb-TdF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZc-xV-DOS">
                                         <rect key="frame" x="501" y="11" width="91" height="30"/>
                                         <state key="normal" title="Forward Icon">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="forward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qN6-Ai-HYJ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -103,7 +112,7 @@
                                     <constraint firstAttribute="bottom" secondItem="fHU-Bl-nV6" secondAttribute="bottom" constant="10" id="oWX-jG-5Vj"/>
                                 </constraints>
                             </view>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sz0-Hl-9c8">
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sz0-Hl-9c8">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="437"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
@@ -122,6 +131,12 @@
                             <constraint firstAttribute="trailing" secondItem="Sz0-Hl-9c8" secondAttribute="trailing" id="y6R-5f-Bx7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myWebView" destination="Sz0-Hl-9c8" id="aOm-Dt-UYL"/>
+                        <outlet property="webBackButton" destination="fHU-Bl-nV6" id="r3j-Qr-hLn"/>
+                        <outlet property="webForwardButton" destination="RZc-xV-DOS" id="UFe-Kc-fkw"/>
+                        <outlet property="webRefreshButton" destination="ZgF-bP-Jeq" id="pUg-Sx-M1l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
