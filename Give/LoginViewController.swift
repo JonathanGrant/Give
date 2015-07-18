@@ -35,7 +35,7 @@ class LoginViewController: UIViewController  {
     }
     
     func fblogin(){
-        PFFacebookUtils.logInInBackgroundWithReadPermissions(["email"], block: {
+        PFFacebookUtils.logInInBackgroundWithReadPermissions(["public_profile", "user_friends", "email", "user_photos"], block: {
             (user: PFUser?, error: NSError?) -> Void in
             if let facebookUser = user{
                 // Your app now has publishing permissions for the user
