@@ -11,7 +11,8 @@ import Parse
 
 class ProfileInputViewController: UIViewController  {
     @IBOutlet weak var birthPlaceField: UITextField!
-    
+    @IBOutlet weak var nameField: UILabel!
+    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var purposeField: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,7 @@ class ProfileInputViewController: UIViewController  {
         var user :PFUser  = PFUser.currentUser()!
         self.birthPlaceField.text = user["username"] as! String
         
+        self.nameField.text = user["username"] as! String
         
         /*
         PFSession.getCurrentSessionInBackgroundWithBlock {(session :PFSession?, error :NSError?) -> Void in
