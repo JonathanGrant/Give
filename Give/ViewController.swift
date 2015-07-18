@@ -10,7 +10,7 @@ import UIKit
 import Social
 import MessageUI
 
-class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
+class ViewController: UIViewController, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,7 +77,25 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     }
     
     @IBAction func sendFromTextMessage(sender: AnyObject) {
-        
+        var textMessage = MFMessageComposeViewController() //doesn;t work right now
+        textMessage.body = "Check out my amazing campaign app on Give!"
+        textMessage.recipients = ["6507993840"]
+        textMessage.messageComposeDelegate = self
+        self.presentViewController(textMessage, animated: true, completion: nil)
+    }
+    
+    func messageComposeViewController(controller: MFMessageComposeViewController!, didFinishWithResult result: MessageComposeResult) {
+        switch result.value {
+        case MessageComposeResultCancelled.value:
+            print("Message Cancelled")
+        case MessageComposeResultFailed.value:
+            print("Message Failed")
+        case MessageComposeResultSent.value:
+            print("Message Sent")
+        default:
+            break
+        }
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
 }
