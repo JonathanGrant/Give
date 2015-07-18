@@ -17,6 +17,7 @@
 		66206F561B5AAC2200350C38 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66206F551B5AAC2200350C38 /* Social.framework */; };
 		66206F581B5AAC3100350C38 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66206F571B5AAC3100350C38 /* Accounts.framework */; };
 		66206F5A1B5AAC5600350C38 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 66206F591B5AAC5600350C38 /* libstdc++.6.dylib */; };
+		66206F5C1B5AC03D00350C38 /* FoundInfoInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66206F5B1B5AC03D00350C38 /* FoundInfoInputViewController.swift */; };
 		66A575BB1B5A0F1E00C7374D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A575BA1B5A0F1E00C7374D /* AudioToolbox.framework */; };
 		66A575BD1B5A0F2700C7374D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A575BC1B5A0F2700C7374D /* CFNetwork.framework */; };
 		66A575BF1B5A0F2F00C7374D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A575BE1B5A0F2F00C7374D /* CoreGraphics.framework */; };
@@ -70,6 +71,7 @@
 		66206F551B5AAC2200350C38 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		66206F571B5AAC3100350C38 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		66206F591B5AAC5600350C38 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
+		66206F5B1B5AC03D00350C38 /* FoundInfoInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundInfoInputViewController.swift; sourceTree = "<group>"; };
 		66A575BA1B5A0F1E00C7374D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		66A575BC1B5A0F2700C7374D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		66A575BE1B5A0F2F00C7374D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -184,6 +186,7 @@
 				383242451B5A0E0500DE9C89 /* Supporting Files */,
 				66DBEF1C1B5A1B14002CC5F6 /* LoginViewController.swift */,
 				66206F471B5A2BB600350C38 /* ProfileInputViewController.swift */,
+				66206F5B1B5AC03D00350C38 /* FoundInfoInputViewController.swift */,
 			);
 			path = Give;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66206F5C1B5AC03D00350C38 /* FoundInfoInputViewController.swift in Sources */,
 				66DBEF1D1B5A1B14002CC5F6 /* LoginViewController.swift in Sources */,
 				3832424A1B5A0E0500DE9C89 /* ViewController.swift in Sources */,
 				66A575EE1B5A16E900C7374D /* ObjectiveCTestObj.m in Sources */,

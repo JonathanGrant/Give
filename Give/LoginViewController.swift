@@ -37,7 +37,9 @@ class LoginViewController: UIViewController  {
     }
     
     func fblogin(){
-        PFFacebookUtils.logInInBackgroundWithReadPermissions(["public_profile", "user_friends", "email", "user_photos","user_about_me", "user_relationships", "user_birthday", "user_location"], block: {
+        
+        let permisions = ["public_profile", "user_friends", "email", "user_photos","user_about_me", "user_relationships", "user_birthday", "user_location"]
+        PFFacebookUtils.logInInBackgroundWithReadPermissions(permisions, block: {
             (user: PFUser?, error: NSError?) -> Void in
             if let facebookUser = user{
                 // Your app now has publishing permissions for the user
@@ -47,6 +49,9 @@ class LoginViewController: UIViewController  {
                 
                 var request :FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
                 request.startWithCompletionHandler({ (connection, result :AnyObject!, error :NSError!) -> Void in
+                    
+                    
+                    println(connection)
                     
                     // TODO error handling
                     println(result)
