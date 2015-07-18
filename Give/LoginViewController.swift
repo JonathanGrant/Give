@@ -20,7 +20,18 @@ class LoginViewController: UIViewController  {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func didLoginTap(sender: AnyObject) {
+        
+       // openProfileInputViewController()
         fblogin()
+    }
+    
+    func openProfileInputViewController(){
+        var targetView: ProfileInputViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProfileInput") as! ProfileInputViewController
+        self.presentViewController(targetView, animated: true, completion: nil)
+        /*
+        let secondViewController :ProfileInputViewController = ProfileInputViewController()
+        self.presentViewController(secondViewController, animated: true, completion: nil)
+        */
     }
     
     func fblogin(){
@@ -31,6 +42,8 @@ class LoginViewController: UIViewController  {
                 println("succeeded to facebook login")
                 println(facebookUser)
                 println(PFUser.currentUser()?.objectId)
+                
+                self.openProfileInputViewController()
             } else {
                 println(error)
             }

@@ -13,6 +13,7 @@
 		3832424F1B5A0E0500DE9C89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3832424E1B5A0E0500DE9C89 /* Images.xcassets */; };
 		383242521B5A0E0500DE9C89 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 383242501B5A0E0500DE9C89 /* LaunchScreen.xib */; };
 		3832425E1B5A0E0500DE9C89 /* GiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3832425D1B5A0E0500DE9C89 /* GiveTests.swift */; };
+		66206F481B5A2BB600350C38 /* ProfileInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66206F471B5A2BB600350C38 /* ProfileInputViewController.swift */; };
 		66A575BB1B5A0F1E00C7374D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A575BA1B5A0F1E00C7374D /* AudioToolbox.framework */; };
 		66A575BD1B5A0F2700C7374D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A575BC1B5A0F2700C7374D /* CFNetwork.framework */; };
 		66A575BF1B5A0F2F00C7374D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A575BE1B5A0F2F00C7374D /* CoreGraphics.framework */; };
@@ -55,6 +56,7 @@
 		383242571B5A0E0500DE9C89 /* GiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3832425C1B5A0E0500DE9C89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3832425D1B5A0E0500DE9C89 /* GiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveTests.swift; sourceTree = "<group>"; };
+		66206F471B5A2BB600350C38 /* ProfileInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileInputViewController.swift; sourceTree = "<group>"; };
 		66A575BA1B5A0F1E00C7374D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		66A575BC1B5A0F2700C7374D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		66A575BE1B5A0F2F00C7374D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -159,6 +161,7 @@
 				383242501B5A0E0500DE9C89 /* LaunchScreen.xib */,
 				383242451B5A0E0500DE9C89 /* Supporting Files */,
 				66DBEF1C1B5A1B14002CC5F6 /* LoginViewController.swift */,
+				66206F471B5A2BB600350C38 /* ProfileInputViewController.swift */,
 			);
 			path = Give;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				3832424A1B5A0E0500DE9C89 /* ViewController.swift in Sources */,
 				66A575EE1B5A16E900C7374D /* ObjectiveCTestObj.m in Sources */,
 				383242481B5A0E0500DE9C89 /* AppDelegate.swift in Sources */,
+				66206F481B5A2BB600350C38 /* ProfileInputViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
