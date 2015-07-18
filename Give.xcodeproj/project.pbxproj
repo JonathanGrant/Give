@@ -31,6 +31,7 @@
 		66A575EE1B5A16E900C7374D /* ObjectiveCTestObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A575ED1B5A16E900C7374D /* ObjectiveCTestObj.m */; };
 		66DBEF191B5A191B002CC5F6 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66DBEF181B5A191B002CC5F6 /* FBSDKCoreKit.framework */; };
 		66DBEF1B1B5A1940002CC5F6 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66DBEF1A1B5A1940002CC5F6 /* FBSDKLoginKit.framework */; };
+		66DBEF1D1B5A1B14002CC5F6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DBEF1C1B5A1B14002CC5F6 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		66A575ED1B5A16E900C7374D /* ObjectiveCTestObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjectiveCTestObj.m; path = Give/ObjectiveCTestObj.m; sourceTree = "<group>"; };
 		66DBEF181B5A191B002CC5F6 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		66DBEF1A1B5A1940002CC5F6 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		66DBEF1C1B5A1B14002CC5F6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				3832424E1B5A0E0500DE9C89 /* Images.xcassets */,
 				383242501B5A0E0500DE9C89 /* LaunchScreen.xib */,
 				383242451B5A0E0500DE9C89 /* Supporting Files */,
+				66DBEF1C1B5A1B14002CC5F6 /* LoginViewController.swift */,
 			);
 			path = Give;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66DBEF1D1B5A1B14002CC5F6 /* LoginViewController.swift in Sources */,
 				3832424A1B5A0E0500DE9C89 /* ViewController.swift in Sources */,
 				66A575EE1B5A16E900C7374D /* ObjectiveCTestObj.m in Sources */,
 				383242481B5A0E0500DE9C89 /* AppDelegate.swift in Sources */,
