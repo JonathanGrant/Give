@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Social
+import MessageUI
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,63 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func shareToFacebook(sender: AnyObject) {
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
+            var facebookSheet: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            facebookSheet.setInitialText("Check out my amazing campaign app on Give!")
+            self.presentViewController(facebookSheet, animated: true, completion: nil)
+        } else {
+            var alert = UIAlertController(title: "Error", message: "Please log in to Facebook from your settings.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
 
+    @IBAction func shareToTwitter(sender: AnyObject) {
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
+            var twitterSheet: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            twitterSheet.setInitialText("Check out my amazing campaign app on Give!")
+            self.presentViewController(twitterSheet, animated: true, completion: nil)
+        } else {
+            var alert = UIAlertController(title: "Error", message: "Please log in to Twitter from your settings.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func sendFromEmail(sender: AnyObject) {
+        var emailTitle = "Give: The Campaigning App"
+        var messageBody = "Check out my amazing campaign app on Give!"
+        var toRecipients = ["grantj@usc.edu"] //optional, maybe find a way to select all contacts
+        
+        var mailController: MFMailComposeViewController = MFMailComposeViewController()
+        mailController.mailComposeDelegate = self
+        mailController.setSubject(emailTitle)
+        mailController.setMessageBody(messageBody, isHTML: false)
+        mailController.setToRecipients(toRecipients)
+        
+        self.presentViewController(mailController, animated: true, completion: nil)
+    }
+    
+    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+        switch result.value {
+            case MFMailComposeResultCancelled.value:
+                print("Mail Cancelled")
+            case MFMailComposeResultSaved.value:
+                print("Mail Saved")
+            case MFMailComposeResultSent.value:
+                print("Mail Cancelled")
+            case MFMailComposeResultFailed.value:
+                print("Mail Failed")
+        default:
+            break
+        }
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func sendFromTextMessage(sender: AnyObject) {
+        
+    }
+    
 }
 

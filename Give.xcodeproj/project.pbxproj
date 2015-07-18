@@ -13,6 +13,8 @@
 		3832424F1B5A0E0500DE9C89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3832424E1B5A0E0500DE9C89 /* Images.xcassets */; };
 		383242521B5A0E0500DE9C89 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 383242501B5A0E0500DE9C89 /* LaunchScreen.xib */; };
 		3832425E1B5A0E0500DE9C89 /* GiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3832425D1B5A0E0500DE9C89 /* GiveTests.swift */; };
+		383242681B5A0EC100DE9C89 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383242671B5A0EC100DE9C89 /* Social.framework */; };
+		3832426A1B5A122F00DE9C89 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383242691B5A122F00DE9C89 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		383242571B5A0E0500DE9C89 /* GiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3832425C1B5A0E0500DE9C89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3832425D1B5A0E0500DE9C89 /* GiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveTests.swift; sourceTree = "<group>"; };
+		383242671B5A0EC100DE9C89 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		383242691B5A122F00DE9C89 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3832426A1B5A122F00DE9C89 /* MessageUI.framework in Frameworks */,
+				383242681B5A0EC100DE9C89 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +65,8 @@
 		383242391B5A0E0500DE9C89 = {
 			isa = PBXGroup;
 			children = (
+				383242691B5A122F00DE9C89 /* MessageUI.framework */,
+				383242671B5A0EC100DE9C89 /* Social.framework */,
 				383242441B5A0E0500DE9C89 /* Give */,
 				3832425A1B5A0E0500DE9C89 /* GiveTests */,
 				383242431B5A0E0500DE9C89 /* Products */,
